@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untuk Bidadariku Tersayang 💖 | A Special Love Story</title>
+  <meta name="description" content="Surat cinta romantis dan kenangan indah untuk pacar tersayang. Ucapan terima kasih, permohonan maaf, dan ungkapan cinta abadi.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Animated Canvas (Hearts & Petals) -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Floating Audio Player Widget -->
+  <div class="audio-control-bar" id="audioControlBar">
+    <button class="music-disc-btn" id="musicToggleBtn" title="Putar / Hentikan Musik Romantis" aria-label="Putar Musik">
+      <div class="disc-vinyl" id="discVinyl">
+        <div class="disc-center">❤️</div>
+      </div>
+      <span class="music-status-text" id="musicStatusText">Putar Musik 🎵</span>
+    </button>
+    <div class="volume-slider-wrap">
+      <input type="range" id="volumeSlider" min="0" max="1" step="0.05" value="0.15" title="Volume Musik" aria-label="Pengatur Volume">
+    </div>
+    <!-- Audio player with chosen romantic song -->
+    <audio id="bgMusic" loop preload="auto" controlsList="nodownload">
+      <source src="assets/music/best-part.media" type="audio/mpeg">
+      <source src="assets/music/H.E.R. - Best Part (Lyrics) Ft. Daniel Caesar.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <!-- ==============================================
+       OVERLAY: SURPRISE ENVELOPE / GATEWAY
+       ============================================== -->
+  <section class="welcome-overlay" id="welcomeOverlay">
+    <div class="envelope-container">
+      <div class="heart-pulse-icon">💌</div>
+      <h1 class="welcome-title">Ada Surat Spesial Untukmu...</h1>
+      <p class="welcome-subtitle">Dari seseorang yang paling mencintaimu di seluruh semesta ✨</p>
+      
+      <div class="envelope-box" id="envelopeBox">
+        <div class="wax-seal" id="waxSealBtn" role="button" tabindex="0">
+          <span class="seal-heart">💖</span>
+          <span class="seal-text">KLIK UNTUK MEMBUKA</span>
+        </div>
+      </div>
+      
+      <p class="welcome-hint">💡 <em>Nyalakan suara HP / laptopmu untuk pengalaman terbaik</em> 🎶</p>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       MAIN ROMANTIC CONTENT
+       ============================================== -->
+  <main class="main-wrapper" id="mainContent">
+
+    <!-- HERO SECTION -->
+    <header class="hero-section">
+      <div class="floating-badge">✨ My Heart Belongs To You ✨</div>
+      <h1 class="hero-title">Hai, Sayangku Bidadariku...</h1>
+      <p class="hero-quote">
+        "Di antara miliaran manusia di dunia, hatiku memilihmu untuk menjadi rumah tempatku pulang."
+      </p>
+
+      <!-- LOVE DAYS COUNTER -->
+      <div class="love-counter-box" id="counterBox">
+        <div class="counter-header">
+          <span class="counter-icon">⏳</span>
+          <h2 class="counter-title">Kita Telah Berbagi Bahagia Selama:</h2>
+        </div>
+
+        <div class="timer-grid">
+          <div class="timer-card">
+            <span class="timer-number" id="timerDays">00</span>
+            <span class="timer-label">Hari</span>
+          </div>
+          <div class="timer-card">
+            <span class="timer-number" id="timerHours">00</span>
+            <span class="timer-label">Jam</span>
+          </div>
+          <div class="timer-card">
+            <span class="timer-number" id="timerMinutes">00</span>
+            <span class="timer-label">Menit</span>
+          </div>
+          <div class="timer-card">
+            <span class="timer-number" id="timerSeconds">00</span>
+            <span class="timer-label">Detik</span>
+          </div>
+        </div>
+        <p class="counter-footer">...dan aku ingin terus bersamamu sampai akhir waktu. 💕</p>
+      </div>
+    </header>
+
+    <!-- SECTION: TIGA SURAT DARI LUBUK HATI -->
+    <section class="section-container letters-section" id="lettersSection">
+      <div class="section-title-wrap">
+        <span class="section-badge">Isi Hatiku</span>
+        <h2 class="section-title">Untaian Kata Tulus Untukmu</h2>
+        <p class="section-desc">Setiap kata di sini ditulis dari lubuk hatiku yang terdalam hanya untukmu, Sayang.</p>
+      </div>
+
+      <div class="letters-grid">
+        <!-- CARD 1: UCAPAN TERIMA KASIH -->
+        <article class="letter-card card-gratitude" id="cardGratitude">
+          <div class="letter-header">
+            <div class="card-icon">🌸</div>
+            <h3 class="card-title">Terima Kasih Telah Hadir</h3>
+          </div>
+          <div class="letter-body">
+            <p>
+              <strong>Sayangku,</strong> terima kasih banyak ya... Terima kasih sudah hadir dan mewarnai hidupku dengan senyum manismu yang selalu bisa menenangkan hatiku di hari-hari yang berat.
+            </p>
+            <p>
+              Terima kasih untuk setiap waktu, perhatian tulus, obrolan manis larut malam, dan kesabaran luar biasamu dalam mengerti setiap sisi diriku.
+            </p>
+            <p>
+              Bersamamu, aku belajar bahwa bahagia itu sangat sederhana: cukup mendengar tawamu dan melihat binar matamu yang indah. Kehadiranmu adalah anugerah terindah yang Tuhan titipkan padaku.
+            </p>
+          </div>
+          <div class="letter-footer">
+            <span class="signature">Selalu bersyukur memilikimu, <em>Dari kekasihmu</em></span>
+          </div>
+        </article>
+
+        <!-- CARD 2: PERMOHONAN MAAF -->
+        <article class="letter-card card-apology" id="cardApology">
+          <div class="letter-header">
+            <div class="card-icon">🌧️</div>
+            <h3 class="card-title">Maafin Aku Kalau Bandel Ya...</h3>
+          </div>
+          <div class="letter-body">
+            <p>
+              <strong>Sayang,</strong> dari lubuk hatiku yang paling dalam, aku mau minta maaf yang sebesar-besarnya... Maafin aku kalau selama ini aku kadang bandel, keras kepala, lambat mengerti, atau sering bikin kamu kesel dan cemberut.
+            </p>
+            <p>
+              Terkadang aku masih ceroboh dan belum bisa jadi sosok yang sempurna untukmu. Tapi sumpah, sedikitpun aku engga pernah berniat untuk menyakiti perasaan kamu yang lembut nan mungil itu.
+            </p>
+            <p>
+              Tolong jangan pernah bosan menasihati aku ya sayang, aku janji bakal terus belajar jadi pribadi yang lebih baik, lebih sabar, dan selalu berusaha membuatmu tersenyum setiap harinya.
+            </p>
+          </div>
+          <div class="letter-footer">
+            <span class="signature">Dengan peluk hangat & penyesalan, <em>Aku minta maaf</em> 🤍</span>
+          </div>
+        </article>
+
+        <!-- CARD 3: I LOVE YOU SO MUCH -->
+        <article class="letter-card card-iloveyou" id="cardLove">
+          <div class="letter-header">
+            <div class="card-icon">👑</div>
+            <h3 class="card-title">I Love You So Much!</h3>
+          </div>
+          <div class="letter-body">
+            <p>
+              <strong>Cintaku,</strong> kata <em>"Aku Cinta Kamu"</em> rasanya masih terlalu sederhana untuk melukiskan betapa berharganya dirimu di dalam hidupku.
+            </p>
+            <p>
+              Aku mencintaimu bukan hanya saat kamu tersenyum manis, tapi juga saat kamu sedang ngambek, lelah, atau saat kamu merasa dunia sedang tidak adil. Hatiku adalah tempatmu berpulang.
+            </p>
+            <p class="highlight-love">
+              <strong>I Love You So Much, Sayangku!</strong> Lebih dari kemarin, dan tidak akan sebanyak cintaku di esok hari. Aku ingin terus menggenggam tanganmu di setiap langkah masa depan kita.
+            </p>
+          </div>
+          <div class="letter-footer">
+            <span class="signature">Cintaku selamanya hanya untukmu ❤️</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION: FOTO KENANGAN KITA (POLAROID GALLERY) -->
+    <section class="section-container gallery-section" id="gallerySection">
+      <div class="section-title-wrap">
+        <span class="section-badge">Galeri Kenangan</span>
+        <h2 class="section-title">Momen-Momen Manis Bersamamu</h2>
+        <p class="section-desc">Kumpulan 20 potret bahagia yang selalu membuatku tersenyum setiap kali mengingatnya.</p>
+      </div>
+
+      <div class="polaroid-grid" id="polaroidGrid">
+        <!-- POLAROID ITEM 1 -->
+        <figure class="polaroid-card tilt-left" data-caption="Senyuman pertamamu yang selalu berhasil membuat hatiku berdebar bahagia.">
+          <div class="pin">📌</div>
+          <div class="photo-frame">
+            <img src="assets/images/74EF5D5A-8D78-41EC-A678-3CF62DE2B493.JPG.jpeg" alt="Momen Indah 1" class="gallery-img" loading="lazy">
+          </div>
+          <figcaption class="polaroid-caption">
+            <span class="caption-text">Senyuman Termanismu 🌸</span>
+            <span class="caption-date">Always in my heart</span>
+          </figcaption>
+        </figure>
+
+        <!-- POLAROID ITEM 2 -->
+        <figure class="polaroid-card tilt-right" data-caption="Genggaman tanganmu selalu jadi tempat paling hangat dan menenangkan bagiku.">
+          <div class="tape"></div>
+          <div class="photo-frame">
+            <img src="assets/images/ABC4FC76-48D2-433F-811B-CB1BB3F892BF.JPG.jpeg" alt="Momen Indah 2" class="gallery-img" loading="lazy">
+          </div>
+          <figcaption class="polaroid-caption">
+            <span class="caption-text">Genggaman Hangat 🤝</span>
+            <span class="caption-date">Tempat paling nyaman</span>
+          </figcaption>
+        </figure>
+
+        <!-- POLAROID ITEM 3 -->
+        <figure class="polaroid-card tilt-subtle-left" data-caption="Binar matamu yang indah selalu berhasil meluluhkan segala lelahku.">
+          <div class="pin">📌</div>
+          <div class="photo-frame">
+            <img src="assets/images/B7F2A9DA-A7B2-4C79-96B4-4EE431A8A119.JPG.jpeg" alt="Momen Indah 3" class="gallery-img" loading="lazy">
+          </div>
+          <figcaption class="polaroid-caption">
+            <span class="caption-text">Binar Matamu ✨</span>
+            <span class="caption-date">Pemandangan terindah</span>
+          </figcaption>
+        </figure>
+
+        <!-- POLAROID ITEM 4 -->
+        <figure class="polaroid-card tilt-subtle-right" data-caption="Ketika kita tertawa bersama, saat itu duniaku terasa begitu sempurna.">
+          <div class="tape"></div>
+          <div class="photo-frame">
+            <img src="assets/images/C89A3D2F-0001-4112-97BA-6E1BCB996FD9.JPG.jpeg" alt="Momen Indah 4" class="gallery-img" loading="lazy">
+          </div>
+          <figcaption class="polaroid-caption">
+            <span class="caption-text">Tawa Bahagia Kita 💖</span>
+            <span class="caption-date">Momen tak ternilai</span>
+          </figcaption>
+        </figure>
+
+        <!-- POLAROID ITEM 5 -->
+        <figure class="polaroid-card tilt-left" data-caption="Kebersamaan sederhana yang selalu penuh cerita dan rasa hangat.">
+          <div class="pin">📌</div>
+          <div class="photo-frame">
+            <img src="assets/images/IMG_0187.jpg" alt="Momen Indah 5" class="gallery-img" loading="lazy">
+          </div>
+          <figcaption class="polaroid-caption">
+            <span class="caption-text">Kebersamaan Manis ☕</span>
+            <span class="caption-date">Setiap detik berharga</span>
+          </figcaption>
+        </figure>
+
+        <!-- POLAROID ITEM 6 -->
+        <figure class="polaroid-card tilt-right" data-caption="Melangkah berdua bergandengan tangan, menatap masa depan bersama.">
+          <div class="tape"></div>
+          <div class="photo-frame">
+            <img src="assets/images/IMG_0207.jpg" alt="Momen Indah 6" class="gallery-img" loading="lazy">
+          </div>
+          <figcaption class="polaroid-caption">
+            <span class="caption-text">Langkah Berdua 🌿</span>
+            <span class="caption-date">Menatap masa depan</span>
+          </figcaption>
+        </figure>
+
+        <!-- POLAROID ITEM 7 -->
+        <figure class="polaroid-card tilt-subtle-left" data-caption="Kamu selalu tampak memesona dan menjadi bidadari terindah di mataku.">
+          <div class="pin">📌</div>
+          <div class="photo-frame">
+            <img src="assets/images/IMG_0238.PNG" alt="Momen Indah 7" class="gallery-img" loading="lazy">
+          </div>
+          <figcaption class="polaroid-caption">
+            <span class="caption-text">Bidadariku Tersayang 🌹</span>
+            <span class="caption-date">Selalu memesona</span>
+          </figcaption>
+        </figure>
+
+        <!-- POLAROID ITEM 8 -->
+        <figure class="polaroid-card tilt-subtle-right" data-caption="Pelukan hangatmu selalu menjadi penawar segala resah dan gelisahku.">
+          <div class="tape"></div>
+          <div class="photo-frame">
+            <img src="assets/images/IMG_0253.JPG.jpeg" alt="Momen Indah 8" class="gallery-img" loading="lazy">
+          </div>
+          <figcaption class="polaroid-caption">
+            <span class="caption-text">Peluk Hangatmu 🤍</span>
+            <span class="caption-date">Penyejuk jiwaku</span>
+          </figcaption>
+        </figure>
+
+        <!-- POLAROID ITEM 9 -->
+        <figure class="polaroid-card tilt-left" data-caption="Hari-hari bersamamu selalu penuh warna ceria dan tawa lepas.">
+          <div class="pin">📌</div>
+          <div class="photo-frame">
+            <img src="assets/images/IMG_0256.JPG.jpeg" alt="Momen Indah 9" class="gallery-img" loading="lazy">
+          </div>
+          <figcaption class="polaroid-caption">
+            <span class="caption-text">Hari Penuh Warna 🎨</span>
+            <span class="caption-date">Bahagia bersamamu</span>
+          </figcaption>
+        </figure>
+
+        <!-- POLAROID ITEM 10 -->
+        <figure class="polaroid-card tilt-right" data-caption="Menikmati senja bersamamu, keindahan langit tak mampu menandingi wajahmu.">
+          <div class="tape"></div>
+          <div class="photo-frame">
+            <img src="assets/images/IMG_0263.JPG.jpeg" alt="Momen Indah 10" class="gallery-img" loading="lazy">
+          </div>
+          <figcaption class="polaroid-caption">
+            <span class="caption-text">Senja & Cerita 🌅</span>
+            <span class="caption-date">Indah tak tergantikan</span>
+          </figcaption>
+        </figure>
+
+        <!-- POLAROID ITEM 11 -->
+        <figure class="polaroid-card tilt-subtle-left" data-caption="Tingkah lucu dan manismu yang tidak pernah gagal membuatku tersenyum.">
+          <div class="pin">📌</div>
+          <div class="photo-frame">
+            <img src="assets/images/IMG_0267.JPG.jpeg" alt="Momen Indah 11" class="gallery-img" loading="lazy">
+          </div>
+          <figcaption class="polaroid-caption">
+            <span class="caption-text">Momen Menggemaskan 🥰</span>
+            <span class="caption-date">Tingkah manismu</span>
+          </figcaption>
+        </figure>
+
+        <!-- POLAROID ITEM 12 -->
+        <figure class="polaroid-card tilt-subtle-right" data-caption="Setiap detik kenangan bersamamu tersimpan rapi dan abadi di lubuk hatiku.">
+          <div class="tape"></div>
+          <div class="photo-frame">
+            <img src="assets/images/IMG_0280.PNG" alt="Momen Indah 12" class="gallery-img" loading="lazy">
+          </div>
+          <figcaption class="polaroid-caption">
+            <span class="caption-text">Kenangan Berharga 💫</span>
+            <span class="caption-date">Tersimpan di hati</span>
+          </figcaption>
+        </figure>
+
+        <!-- POLAROID ITEM 13 -->
+        <figure class="polaroid-card tilt-left" data-caption="Saat bersamamu, rasanya waktu berjalan terlalu cepat karena begitu bahagia.">
+          <div class="pin">📌</div>
+          <div class="photo-frame">
+            <img src="assets/images/IMG_0289.jpg" alt="Momen Indah 13" class="gallery-img" loading="lazy">
+          </div>
+          <figcaption class="polaroid-caption">
+            <span class="caption-text">Waktu Bersamamu 🌷</span>
+            <span class="caption-date">Terasa begitu cepat</span>
+          </figcaption>
+        </figure>
+
+        <!-- POLAROID ITEM 14 -->
+        <figure class="polaroid-card tilt-right" data-caption="Senyum manismu adalah penenang nomor satu di hari-hariku yang melelahkan.">
+          <div class="tape"></div>
+          <div class="photo-frame">
+            <img src="assets/images/IMG_0425.jpg" alt="Momen Indah 14" class="gallery-img" loading="lazy">
+          </div>
+          <figcaption class="polaroid-caption">
+            <span class="caption-text">Senyum Favoritku 💕</span>
+            <span class="caption-date">Penenang hariku</span>
+          </figcaption>
+        </figure>
+
+        <!-- POLAROID ITEM 15 -->
+        <figure class="polaroid-card tilt-subtle-left" data-caption="Kencan kecil kita yang selalu terasa istimewa dan penuh makna.">
+          <div class="pin">📌</div>
+          <div class="photo-frame">
+            <img src="assets/images/IMG_0455.JPG.jpeg" alt="Momen Indah 15" class="gallery-img" loading="lazy">
+          </div>
+          <figcaption class="polaroid-caption">
+            <span class="caption-text">Kencan Manis Kita 🍨</span>
+            <span class="caption-date">Sederhana tapi bermakna</span>
+          </figcaption>
+        </figure>
+
+        <!-- POLAROID ITEM 16 -->
+        <figure class="polaroid-card tilt-subtle-right" data-caption="Kebaikan dan ketulusan hatimu membuatku selalu bersyukur memilikimu.">
+          <div class="tape"></div>
+          <div class="photo-frame">
+            <img src="assets/images/IMG_0456.JPG.jpeg" alt="Momen Indah 16" class="gallery-img" loading="lazy">
+          </div>
+          <figcaption class="polaroid-caption">
+            <span class="caption-text">Wanita Hebatku 👑</span>
+            <span class="caption-date">Kagum dengan dirimu</span>
+          </figcaption>
+        </figure>
+
+        <!-- POLAROID ITEM 17 -->
+        <figure class="polaroid-card tilt-left" data-caption="Aku berjanji akan terus menggenggam tanganmu di setiap langkah perjalanan kita.">
+          <div class="pin">📌</div>
+          <div class="photo-frame">
+            <img src="assets/images/IMG_0476.jpg" alt="Momen Indah 17" class="gallery-img" loading="lazy">
+          </div>
+          <figcaption class="polaroid-caption">
+            <span class="caption-text">Genggam Erat 🌟</span>
+            <span class="caption-date">Lewati hari bersama</span>
+          </figcaption>
+        </figure>
+
+        <!-- POLAROID ITEM 18 -->
+        <figure class="polaroid-card tilt-right" data-caption="Terima kasih telah menjadi mentari yang menyinari dan menghangatkan hidupku.">
+          <div class="tape"></div>
+          <div class="photo-frame">
+            <img src="assets/images/IMG_0506.JPG.jpeg" alt="Momen Indah 18" class="gallery-img" loading="lazy">
+          </div>
+          <figcaption class="polaroid-caption">
+            <span class="caption-text">Matahari Hatiku 🌻</span>
+            <span class="caption-date">Terima kasih bidadariku</span>
+          </figcaption>
+        </figure>
+
+        <!-- POLAROID ITEM 19 -->
+        <figure class="polaroid-card tilt-subtle-left" data-caption="Takkan pernah ada orang lain yang bisa menggantikan tempatmu di dalam hatiku.">
+          <div class="pin">📌</div>
+          <div class="photo-frame">
+            <img src="assets/images/IMG_0522.JPG.jpeg" alt="Momen Indah 19" class="gallery-img" loading="lazy">
+          </div>
+          <figcaption class="polaroid-caption">
+            <span class="caption-text">Selalu Untukmu 💌</span>
+            <span class="caption-date">Takkan pernah terganti</span>
+          </figcaption>
+        </figure>
+
+        <!-- POLAROID ITEM 20 -->
+        <figure class="polaroid-card tilt-subtle-right" data-caption="Cinta dan sayangku padamu akan selalu abadi, hari ini, esok, dan selamanya.">
+          <div class="tape"></div>
+          <div class="photo-frame">
+            <img src="assets/images/IMG_0536.JPG.jpeg" alt="Momen Indah 20" class="gallery-img" loading="lazy">
+          </div>
+          <figcaption class="polaroid-caption">
+            <span class="caption-text">Forever & Always 💍</span>
+            <span class="caption-date">Cintaku sampai akhir waktu</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SECTION: VIDEO KITA BERSAMA -->
+    <section class="section-container video-section" id="videoSection">
+      <div class="section-title-wrap">
+        <span class="section-badge">Video Kenangan</span>
+        <h2 class="section-title">Detik-Detik Berharga yang Terekam</h2>
+        <p class="section-desc">Video singkat kebersamaan kita yang selalu menggetarkan hati saat diputar ulang.</p>
+      </div>
+
+      <div class="video-theater-wrapper">
+        <div class="video-frame-outer">
+          <div class="video-film-header">
+            <span class="film-circle red"></span>
+            <span class="film-circle yellow"></span>
+            <span class="film-circle green"></span>
+            <span class="film-title" id="filmTitle">📹 Video 1: Our Special Moments Together.mp4</span>
+          </div>
+
+          <div class="video-player-container">
+            <video id="coupleVideo" controls controlsList="nodownload noplaybackrate nofullscreen" disablePictureInPicture playsinline preload="metadata" oncontextmenu="return false;">
+              <source id="videoSource" src="assets/videos/video-kita.media" type="video/mp4">
+              <source src="assets/videos/video-kita.mp4" type="video/mp4">
+              Peramban web tidak mendukung tag video.
+            </video>
+          </div>
+
+          <!-- Video Selector Buttons (Di Bawah Video Utama) -->
+          <div class="video-controls-switch-bar">
+            <span class="switch-bar-label">Pilih Video Untuk Ditonton:</span>
+            <div class="video-btn-group">
+              <button class="video-select-btn active" id="btnVideo1" data-src="assets/videos/video-kita.media" data-title="📹 Video 1: Our Special Moments Together.mp4" data-caption="💑 &quot;Setiap tawa dan cerita di video ini adalah bukti betapa indahnya hariku saat ada kamu.&quot;">
+                <span class="vbtn-icon">🎬</span>
+                <span class="vbtn-title">Video 1: Momen Bahagia Kita</span>
+              </button>
+              <button class="video-select-btn" id="btnVideo2" data-src="assets/videos/IMG_0562.media" data-title="📹 Video 2: Kenangan Spesial Bersamamu.mp4" data-caption="💖 &quot;Merekam setiap detik senyummu adalah caraku mengabadikan cinta terindah.&quot;">
+                <span class="vbtn-icon">📹</span>
+                <span class="vbtn-title">Video 2: Kenangan Spesial</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="video-caption-bar">
+            <p id="videoCaptionText">💑 "Setiap tawa dan cerita di video ini adalah bukti betapa indahnya hariku saat ada kamu."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: INTERACTIVE LOVE JAR (ALASAN AKU CINTA KAMU) -->
+    <section class="section-container reasons-section" id="reasonsSection">
+      <div class="section-title-wrap">
+        <span class="section-badge">Love Notes</span>
+        <h2 class="section-title">Kenapa Aku Begitu Mencintaimu?</h2>
+        <p class="section-desc">Klik toples cinta di bawah ini untuk mengambil salah satu dari ratusan alasanku mencintaimu!</p>
+      </div>
+
+      <div class="love-jar-container">
+        <div class="love-jar-card" id="loveJarBtn" role="button" tabindex="0">
+          <div class="jar-shine"></div>
+          <div class="jar-icon">🍯❤️</div>
+          <div class="jar-text">Klik Toples Ini Untuk Buka Pesan Cinta</div>
+          <span class="sparkle-fx">✨</span>
+        </div>
+
+        <div class="love-note-reveal" id="loveNoteReveal">
+          <div class="note-paper">
+            <span class="note-quote-mark">“</span>
+            <p id="noteText">Kamu adalah alasan kenapa setiap pagi aku bangun dengan penuh semangat dan senyuman di wajah.</p>
+            <span class="note-index" id="noteIndex">Pesan Cinta #1</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: LOVE METER & PLAYFUL QUESTION -->
+    <section class="section-container playful-section" id="playfulSection">
+      <div class="section-title-wrap">
+        <span class="section-badge">Uji Seberapa Besar Cintaku</span>
+        <h2 class="section-title">Seberapa Besar Rasa Cintaku Padamu?</h2>
+      </div>
+
+      <div class="love-meter-card">
+        <div class="meter-bar-outer">
+          <div class="meter-bar-fill" id="meterFill"></div>
+        </div>
+        <div class="meter-score-text" id="meterScoreText">0%</div>
+        <button class="meter-trigger-btn" id="boostLoveBtn">💖 Tekan Untuk Mengukur Cintaku!</button>
+        <p class="meter-result-desc" id="meterResultDesc">Rasa sayangku padamu tak pernah cukup diukur dengan angka biasa...</p>
+      </div>
+
+      <!-- PLAYFUL PROPOSAL / COMMITMENT QUESTION -->
+      <div class="sweet-question-box">
+        <h3 class="question-title">Pertanyaan Terpenting Hari Ini:</h3>
+        <p class="question-text">"Maukah kamu tetap bersamaku, berjalan bersama melewati hari-hari indah di masa depan?"</p>
+        
+        <div class="answer-buttons-group">
+          <button class="btn-yes" id="btnYes">MAU BANGET! 💕</button>
+          <button class="btn-no" id="btnNo">Nggak 😜</button>
+        </div>
+        
+        <div class="sweet-response-box" id="sweetResponseBox">
+          <div class="congrats-hearts">🎉💖👰🤵✨</div>
+          <h3>YEEEY! Aku janji akan selalu menjaga dan membahagiakanmu selamanya!</h3>
+          <p>Terima kasih sudah memilihku jadi pendamping hidupmu. I Love You To The Moon and Back! 🌙💫</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="romantic-footer">
+      <div class="footer-heart-anim">❤️</div>
+      <p class="footer-text">Dibuat dengan segenap cinta, tulus dari lubuk hatiku yang terdalam.</p>
+      <p class="footer-subtext">Untuk wanitaku yang paling istimewa dan paling kucintai selamanya. 🌹</p>
+      <div class="copyright">Forever & Always • Together With You</div>
+    </footer>
+
+  </main>
+
+  <!-- ==============================================
+       MODALS
+       ============================================== -->
+  
+  <!-- LIGHTBOX MODAL UNTUK FOTO -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <button class="lightbox-close" id="lightboxCloseBtn">&times;</button>
+    <div class="lightbox-content">
+      <img src="" alt="Full view" id="lightboxImg">
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

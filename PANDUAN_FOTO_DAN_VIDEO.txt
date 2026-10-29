@@ -1,0 +1,88 @@
+==================================================================
+💖 PANDUAN MUDAH MENGGANTI FOTO, VIDEO, DAN LAGU UNTUK PACARMU 💖
+==================================================================
+
+Halo! Website romantis ini sudah siap 100% dan bisa langsung dibuka
+dengan mengklik 2x file: index.html di Google Chrome / Edge / Browser lainnya.
+
+Website ini sudah dilengkapi:
+- Animasi Surat Cinta Pembuka (Wax Seal Envelope)
+- Efek Hati & Kelopak Bunga Berterbangan (Floating Canvas)
+- Musik Melodi Romantis (Otomatis berbunyi begitu surat dibuka)
+- Penghitung Hari Jadian / Bersama (Real-time Timer)
+- 3 Surat Cinta Tulus:
+  * Ucapan Terima Kasih
+  * Permohonan Maaf Tulus (Kalau Bandel)
+  * Ungkapan I Love You So Much
+- Galeri Foto Polaroid Kenangan (bisa di-zoom/lightbox)
+- Pemutar Video Kenangan Bersama (Format Bioskop / Retro TV)
+- Toples Cinta Interaktif (21 Alasan Kenapa Aku Cinta Kamu)
+- Pengukur Cinta (Love Meter) sampai Tak Terhingga (∞)
+- Tombol Interaktif "Mau terus sama aku selamanya?" (Tombol "Nggak" otomatis kabur saat didekati kursor/jari!)
+
+
+------------------------------------------------------------------
+1. CARA MENGGANTI FOTO KENANGAN KALIAN
+------------------------------------------------------------------
+Ada 2 CARA MUDAH:
+
+CARA A (Paling Cepat dari Browser):
+1. Buka file `index.html` di browser.
+2. Di bagian Galeri Foto Polaroid, klik tombol:
+   "📸 Mau ganti dengan foto-fotomu? Klik di sini"
+3. Pilih foto-foto kalian dari laptop/HP. Foto akan langsung terpasang!
+
+CARA B (Permanen di Folder):
+Cukup copy foto kalian ke dalam folder:
+`assets/images/`
+Lalu beri nama:
+- foto1.jpg  (Momen senyuman termanis)
+- foto2.jpg  (Genggaman tangan / momen jalan bersama)
+- foto3.jpg  (Momen senja / liburan)
+- foto4.jpg  (Momen tawa bahagia)
+- foto5.jpg  (Momen kencan makan / ngopi favorit)
+- foto6.jpg  (Momen berdua terbaik)
+
+(Bisa pakai format .jpg, .png, atau .jpeg)
+
+
+------------------------------------------------------------------
+2. CARA MENGGANTI VIDEO KENANGAN
+------------------------------------------------------------------
+1. Siapkan file video kebersamaan kalian (format .mp4).
+2. Copy video tersebut ke folder:
+   `assets/videos/`
+3. Beri nama file:
+   `video-kita.mp4`
+
+Video akan otomatis terpasang dan bisa diputar dengan indah di frame bioskop romantis!
+
+
+------------------------------------------------------------------
+3. CARA MENGGANTI LAGU MUSIK ROMANTIS
+------------------------------------------------------------------
+Secara default, website ini SUDAH memiliki melodi musik romantis bawaan
+(sintesis piano/chimes nada lembut) yang langsung berbunyi saat surat dibuka.
+
+Jika kamu punya lagu kenangan khusus (misal lagu favorit kalian berdua):
+1. Siapkan file musik .mp3 (contoh lagu dari Bruno Mars, Nadin Amizah, Pamungkas, dll).
+2. Copy lagu tersebut ke dalam folder:
+   `assets/music/`
+3. Beri nama:
+   `lagu-kita.mp3`
+
+Maka website akan otomatis memutar lagu kenangan kalian tersebut!
+
+
+------------------------------------------------------------------
+4. CARA MENGATUR TANGGAL JADIAN / PERTAMA KALI KETEMU
+------------------------------------------------------------------
+1. Buka website `index.html`.
+2. Di kotak "Kita Telah Berbagi Bahagia Selama:", klik tombol:
+   "⚙️ Atur Tanggal"
+3. Pilih tanggal & jam jadian atau pertama kali kalian bertemu.
+4. Klik "Simpan Tanggal 💖".
+Tanggal akan otomatis tersimpan dan menghitung waktu kebersamaan kalian secara real-time!
+
+Semoga pacarmu terharu, tersenyum bahagia, dan makin sayang sama kamu ya! 💖✨
+==================================================================
