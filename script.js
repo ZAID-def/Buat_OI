@@ -157,30 +157,24 @@ const discVinyl = document.getElementById('discVinyl');
 const musicStatusText = document.getElementById('musicStatusText');
 const volumeSlider = document.getElementById('volumeSlider');
 
-// In-memory Blob Cache to prevent Download Managers (like IDM) from intercepting media
-const mediaBlobCache = new Map();
-
-function loadAsBlob(url, mimeType) {
-  if (mediaBlobCache.has(url)) {
-    return Promise.resolve(mediaBlobCache.get(url));
-  }
-  return fetch(url)
-    .then(res => res.blob())
-    .then(blob => {
-      const blobUrl = URL.createObjectURL(new Blob([blob], { type: mimeType }));
-      mediaBlobCache.set(url, blobUrl);
-      return blobUrl;
-    });
-}
-
-// Convert background music to in-memory Blob URL on HTTP/HTTPS
-if (window.location.protocol.startsWith('http') && bgMusic) {
-  loadAsBlob('assets/music/best-part.media', 'audio/mpeg')
-    .then(blobUrl => {
-      bgMusic.src = blobUrl;
-      bgMusic.load();
-    })
-    .catch(() => {});
+// Native Audio Event Listeners for reliable playback state
+if (bgMusic) {
+  bgMusic.addEventListener('play', () => {
+    isAudioPlaying = true;
+    updateMusicUI(true);
+  });
+  bgMusic.addEventListener('pause', () => {
+    isAudioPlaying = false;
+    updateMusicUI(false);
+  });
+  bgMusic.addEventListener('ended', () => {
+    // Ensure seamless looping
+    bgMusic.currentTime = 0;
+    bgMusic.play().catch(() => {});
+  });
+  bgMusic.addEventListener('error', (e) => {
+    console.warn('Audio element notice:', e);
+  });
 }
 
 // Romantic Chord Progressions (Canon in D / Romantic Lofi Melody in Web Audio)
@@ -241,44 +235,27 @@ function startSynthMusic() {
 }
 
 function startMusic() {
-  if (!audioCtx) {
-    const AudioContext = window.AudioContext || window.webkitAudioContext;
-    if (AudioContext) audioCtx = new AudioContext();
-  }
-  if (audioCtx && audioCtx.state === 'suspended') {
-    audioCtx.resume();
-  }
+  if (!bgMusic) return;
 
-  // Try playing custom MP3 first, set to 15% volume, otherwise use fallback synth
   const currentVol = parseFloat(volumeSlider ? volumeSlider.value : 0.15) || 0.15;
   bgMusic.volume = currentVol;
   if (volumeSlider) volumeSlider.value = currentVol;
-  const playPromise = bgMusic.play();
 
+  const playPromise = bgMusic.play();
   if (playPromise !== undefined) {
     playPromise.then(() => {
-      // Custom audio file exists and is playing
       isAudioPlaying = true;
       updateMusicUI(true);
-    }).catch(() => {
-      // Fallback to built-in romantic melody synthesizer
-      isAudioPlaying = true;
-      startSynthMusic();
-      updateMusicUI(true);
+    }).catch((err) => {
+      console.warn('Audio waiting for user gesture:', err);
     });
-  } else {
-    isAudioPlaying = true;
-    startSynthMusic();
-    updateMusicUI(true);
   }
 }
 
 function stopMusic() {
   isAudioPlaying = false;
-  bgMusic.pause();
-  if (synthInterval) {
-    clearInterval(synthInterval);
-    synthInterval = null;
+  if (bgMusic) {
+    bgMusic.pause();
   }
   updateMusicUI(false);
 }
@@ -294,7 +271,7 @@ function updateMusicUI(playing) {
 }
 
 musicToggleBtn.addEventListener('click', () => {
-  if (isAudioPlaying) {
+  if (!bgMusic.paused) {
     stopMusic();
   } else {
     startMusic();
@@ -413,15 +390,6 @@ const videoButtons = document.querySelectorAll('.video-select-btn');
 let wasMusicPlayingBeforeVideo = false;
 
 if (coupleVideo) {
-  // Pre-load initial video as in-memory Blob URL to prevent download managers (IDM) interception
-  if (window.location.protocol.startsWith('http')) {
-    loadAsBlob('assets/videos/video-kita.media', 'video/mp4')
-      .then(blobUrl => {
-        coupleVideo.src = blobUrl;
-      })
-      .catch(() => {});
-  }
-
   // When video starts playing: turn off/pause background music
   coupleVideo.addEventListener('play', () => {
     if (isAudioPlaying || !bgMusic.paused) {
@@ -464,24 +432,21 @@ if (coupleVideo) {
           videoCaptionText.textContent = caption;
         }
 
-        // Smooth switch of video source via Blob (completely bypasses IDM interception)
+        // Instant direct switch of video source via progressive streaming
         coupleVideo.pause();
-        if (window.location.protocol.startsWith('http')) {
-          loadAsBlob(src, 'video/mp4')
-            .then(blobUrl => {
-              coupleVideo.src = blobUrl;
-              coupleVideo.load();
-              coupleVideo.play().catch(() => {});
-            })
-            .catch(() => {
-              coupleVideo.src = src;
-              coupleVideo.load();
-              coupleVideo.play().catch(() => {});
-            });
-        } else {
-          coupleVideo.src = src;
-          coupleVideo.load();
-          coupleVideo.play().catch(() => {});
+        const videoSource = document.getElementById('videoSource');
+        if (videoSource) {
+          videoSource.src = src;
+        }
+        coupleVideo.src = src;
+        coupleVideo.load();
+        coupleVideo.currentTime = 0;
+        
+        const playPromise = coupleVideo.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            // Deferred until user hits play on controls
+          });
         }
       });
     });
